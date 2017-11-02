@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'blog/css/materialize.css' %}">
+    <script src="{% static 'blog/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'blog/js/materialize.js' %}"></script>
+    <title>SQL Demo</title>
+    <style>
+        .card-panel {
+            margin-top: 150px;
+        }
+    </style>
+</head>
+<body class="teal lighten-3">
+    <div class="student student-{{student.pk}}">
+    <div class="container">
+    <div class="card-panel hoverable">
+        <div class="center-align">
+            <h4>语文成绩：{{ student.entrance_grade1 }}</h4>
+            <h4>数学成绩：{{ student.entrance_grade2 }}</h4>
+            <h4>英语成绩：{{ student.entrance_grade3 }}</h4>
+            <h4>政治成绩：{{ student.entrance_grade4 }}</h4>
+            <h4>历史成绩：{{ student.entrance_grade5 }}</h4>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
